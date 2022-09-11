@@ -1,0 +1,21 @@
+.contactDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 12rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 30px;
+}
+.contactDetail p {
+    font-size: 20px;
+}
+.contactDetail a {
+    text-decoration: none;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 8px 20px;
+    color: aliceblue;
+}

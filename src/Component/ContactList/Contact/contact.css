@@ -1,0 +1,22 @@
+.link {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 10rem;
+}
+.link p {
+  color: black;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+}
+.btn a button{
+border: 1px solid blueviolet;
+color: blueviolet;
+background-color: #fff;
+}
