@@ -1,39 +1,41 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getOneContact } from "../../services/services";
+import { useNavigate, useParams } from "react-router-dom";
+import { getOneContact, updateContact } from "../../services/services";
 import "./editContact.css";
 
-const EditContact = ({ editContact }) => {
-    const [contact, setContact] = useState({ name: "", email: "" });
-    const params = useParams();
-  
+const EditContact = () => {
+  const [contact, setContact] = useState({ name: "", email: "" });
+  const params = useParams();
+  const navigate = useNavigate();
+
   const changeHandler = (e) => {
     const value = e.target.value;
     setContact({ ...contact, [e.target.name]: value });
   };
-  const submitHandler = (e) => {
+
+  const submitHandler = async (e) => {
     if (!contact.name || !contact.email) {
       alert("All filds are mandatory!");
       return;
     }
-      e.preventDefault();
-      
-      editContact(contact, params.id);
-      
-    setContact({ name: "", email: "" });
+    e.preventDefault();
+    try {
+      await updateContact(params.id, contact);
+      navigate("/");
+    } catch (error) {}
 
+  };
+  useEffect(() => {
+    const localFetch = async () => {
+      try {
+        const { data } = await getOneContact(params.id);
+        setContact({ name: data.name, email: data.email });
+      } catch (error) {
+        console.log(error);
+      }
     };
-    useEffect(() => {
-        const localFetch = async () => {
-          try {
-            const { data } = await getOneContact(params.id);
-            setContact({ name: data.name, email: data.email });
-          } catch (error) {
-            console.log(error);
-          }
-        };
-        localFetch();
-      }, []);
+    localFetch();
+  }, []);
   return (
     <form className="form">
       <h2>Edit Contact</h2>

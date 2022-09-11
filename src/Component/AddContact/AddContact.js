@@ -1,21 +1,29 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { addNewContact } from "../../services/services";
 
 import "./addContact.css";
 const AddContact = ({ addContact }) => {
   const [contact, setContact] = useState({ name: "", email: "" });
+  const navigate = useNavigate();
+
   const changeHandler = (e) => {
     const value = e.target.value;
     setContact({ ...contact, [e.target.name]: value });
   };
-  const submitHandler = (e) => {
+
+  const submitHandler = async (e) => {
     if (!contact.name || !contact.email) {
       alert("All filds are mandatory!");
       return;
     }
     e.preventDefault();
-    addContact(contact);
-    setContact({ name: "", email: "" });
-    // console.log(contact);
+    try {
+      await addNewContact(contact);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -41,9 +49,14 @@ const AddContact = ({ addContact }) => {
           name="email"
         />
       </div>
-      <button type="submit" onClick={submitHandler}>
-        Add
-      </button>
+      <div className="btns">
+        <Link to="/">
+          <button>Back</button>
+        </Link>
+        <button type="submit" onClick={submitHandler}>
+          Add
+        </button>
+      </div>
     </form>
   );
 };

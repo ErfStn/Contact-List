@@ -12,7 +12,9 @@ color: rgb(255, 255, 255);
 border-radius: 5px;
 text-decoration: none;
 cursor: pointer;
+outline: none;
 }
+
 .contactList {
   display: flex;
   flex-direction: column;
@@ -22,8 +24,6 @@ cursor: pointer;
 .contact {
   width: 50rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 5px 15px;
   background-color: azure;
   padding: 10px 20px;

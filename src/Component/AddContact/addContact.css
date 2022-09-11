@@ -1,43 +1,57 @@
-
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 50%;
-    height: 250px;
-  }
-.form h2{
-    display: flex;
-align-content: flex-start;
-margin: 0;
-  }
-  .formControl{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .formControl label{
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 250px;
+}
+.form h2 {
+  display: flex;
+  align-content: flex-start;
+  margin: 0;
+}
+.formControl {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.formControl label {
   font-weight: 600;
   margin-bottom: 5px;
-  }
-  .formControl input{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    padding: 10px 15px;
-    width: 100%;
-  }
-  .formControl input:focus{
-    border: 2px solid blueviolet;
-  }
-  .form button{
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color: blueviolet;
-    color: #fff;
-    font-weight: bold;
-    padding: 8px 16px;
-    width: 100px;  
-    cursor: pointer;
+}
+.formControl input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+
+
+}
+.formControl input:focus {
+  border: 2px solid blueviolet;
+}
+.form button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  width: 100px;
+  cursor: pointer;
+}
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.btns a button{
+  border: 1px solid blueviolet;
+  color: blueviolet;
+  background-color: #fff;
+  outline: none;
   }

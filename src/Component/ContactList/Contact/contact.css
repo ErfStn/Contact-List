@@ -4,19 +4,36 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-right: 10rem;
+  margin-right: 2rem;
+  outline: none;
+}
+.link:focus {
+  border-bottom: 1px solid gray;
 }
 .link p {
   color: black;
+  min-width: 250px;
+  display: flex;
 }
-.btn{
+.flex-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 10rem;
 }
-.btn a button{
-border: 1px solid blueviolet;
-color: blueviolet;
-background-color: #fff;
+
+.btn a button {
+  border: 1px solid blueviolet;
+  color: blueviolet;
+  background-color: #fff;
+  outline: none;
+}
+.btn a {
+  outline: none;
 }

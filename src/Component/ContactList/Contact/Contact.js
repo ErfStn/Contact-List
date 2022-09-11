@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import avatar from "../../../assets/images/avatar.png";
 import "./contact.css";
 
@@ -8,6 +8,7 @@ const Contact = ({ contact, onDelete }) => {
     <div key={id} className="contact">
       <Link to={`user/${id}`} state={contact} className="link">
         <img src={avatar} alt="user" />
+
         <p>{name}</p>
         <p>{email}</p>
       </Link>
