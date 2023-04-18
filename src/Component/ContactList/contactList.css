@@ -1,55 +1,51 @@
 .topNav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width:50rem;
-  margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	width: 100%;
 }
-.topNav a{
-padding: 6px 20px;
-background-color: blueviolet;
-color: rgb(255, 255, 255);
-border-radius: 5px;
-text-decoration: none;
-cursor: pointer;
-outline: none;
+.topNav a {
+	padding: 6px 20px;
+	background-color: blueviolet;
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
 }
-.topNav input{
-  width: 10rem;
-padding: 6px 12px;
-border-radius: 5px;
-border: 1px solid blueviolet;
-outline: none;
+.topNav input {
+	width: 10rem;
+	padding: 6px 12px;
+	border-radius: 5px;
+	border: 1px solid blueviolet;
+	outline: none;
 }
 
 .contactList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 }
 .contact {
-  width: 50rem;
-  display: flex;
-  padding: 5px 15px;
-  background-color: azure;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+	width: 100%;
+	display: flex;
+	background-color: #ede9fe;
+	border-radius: 5px;
+	margin-bottom: 20px;
 }
-.contact {
-  color: black;
-}
+
 .contact button {
-  cursor: pointer;
-  outline: none;
-  border: 1px solid red;
-  border-radius: 5px;
-  padding: 4px 10px;
-  color: red;
-background-color: #fff;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid red;
+	border-radius: 5px;
+	padding: 4px 10px;
+	color: red;
+	background-color: #fff;
 }
 .contact img {
-  width: 30px;
-  height: 30px;
+	width: 30px;
+	height: 30px;
 }

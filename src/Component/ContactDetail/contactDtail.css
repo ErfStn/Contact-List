@@ -1,21 +1,21 @@
 .contactDetail {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  height: 12rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 20rem;
+	height: 12rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 1rem;
 }
 .contactDetail p {
-    font-size: 20px;
+	font-size: 20px;
 }
 .contactDetail a {
-    text-decoration: none;
-    background-color: blueviolet;
-    border-radius: 5px;
-    padding: 8px 20px;
-    color: aliceblue;
+	text-decoration: none;
+	background-color: blueviolet;
+	border-radius: 5px;
+	padding: 8px 20px;
+	color: aliceblue;
 }
